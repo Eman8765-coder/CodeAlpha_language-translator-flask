@@ -2,13 +2,13 @@
 
 A full-stack language translation web application built with **Python Flask** backend and vanilla **HTML/CSS/JavaScript** frontend, powered by the **MyMemory Translation API**.
 
-Built as part of my **CodeAlpha Remote Internship** — 2025.
+Built as part of my **AI Internship at CodeAlpha** — August 2026.
 
 ---
 
 ## 🚀 Live Demo
 
-> Run locally by following the setup instructions below.
+🔗 **[https://EmanFatima8765.pythonanywhere.com](https://EmanFatima8765.pythonanywhere.com)**
 
 ---
 
@@ -31,6 +31,7 @@ Built as part of my **CodeAlpha Remote Internship** — 2025.
 | Frontend | HTML5, CSS3, JavaScript (Vanilla) |
 | Backend | Python 3, Flask |
 | API | MyMemory Translation API (free) |
+| Deployment | PythonAnywhere (free hosting) |
 | Version Control | Git + GitHub |
 
 ---
@@ -41,7 +42,10 @@ Built as part of my **CodeAlpha Remote Internship** — 2025.
 language-translator-flask/
 ├── app.py                 # Flask backend server
 ├── requirements.txt       # Python dependencies
-├── HOW-TO-RUN.md          # Detailed run guide
+├── Procfile               # For alternative deployment (Render)
+├── .gitignore             # Files excluded from Git
+├── README.md              # Project documentation
+├── HOW-TO-RUN.md          # Detailed local run guide
 └── templates/
     └── index.html         # Frontend (HTML + CSS + JS)
 ```
@@ -56,17 +60,24 @@ git clone https://github.com/Eman8765-coder/language-translator-flask.git
 cd language-translator-flask
 ```
 
-### 2. Install dependencies
+### 2. Create a virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # Mac/Linux
+```
+
+### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Start the Flask server
+### 4. Start the Flask server
 ```bash
 python app.py
 ```
 
-### 4. Open in browser
+### 5. Open in browser
 ```
 http://localhost:5000
 ```
@@ -88,6 +99,10 @@ Flask sends result back to browser
       ↓
 JavaScript displays translation on screen
 ```
+
+The frontend never talks directly to the translation API.
+All requests go through the Flask backend — this is the correct
+and secure way to build a full-stack web application.
 
 ---
 
@@ -137,18 +152,31 @@ Body: { "text": "Hello", "source": "en", "target": "ur" }
 
 ---
 
+## ☁️ Deployment
+
+This app is deployed on **PythonAnywhere** using a Python 3.10 virtual environment.
+
+**Live URL:** https://EmanFatima8765.pythonanywhere.com
+
+**Deployment steps:**
+1. Clone repo on PythonAnywhere via Bash console
+2. Create virtualenv with Python 3.10
+3. Install dependencies inside virtualenv
+4. Configure WSGI file to point to Flask app
+5. Set virtualenv path in Web tab
+6. Reload web app
+
+---
+
 ## 👩‍💻 Author
 
 **Eman Fatima**
 - 🎓 BS Computer Science — University of Agriculture, Faisalabad (Semester 4)
-- 💼 Software Development Intern — CodeAlpha (Remote)
+- 💼 AI Intern — CodeAlpha (Remote) · Aug 2026 – Sep 2026
 - 🐙 GitHub: [Eman8765-coder](https://github.com/Eman8765-coder)
-- 💼 LinkedIn: [www.linkedin.com/in/eman-fatima-4481913b6]
+- 💼 LinkedIn: [linkedin.com/in/eman-fatima-4481913b6](https://linkedin.com/in/eman-fatima-4481913b6)
 
 ---
-
-## 🚀 Live Demo
-https://EmanFatima8765.pythonanywhere.com
 
 ## 📄 License
 
@@ -160,4 +188,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - [MyMemory API](https://mymemory.translated.net/) — free translation service
 - [Flask](https://flask.palletsprojects.com/) — Python web framework
+- [PythonAnywhere](https://www.pythonanywhere.com/) — free Python hosting
 - [Google Fonts — Inter](https://fonts.google.com/specimen/Inter) — typography
