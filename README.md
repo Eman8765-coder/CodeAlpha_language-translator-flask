@@ -147,6 +147,9 @@ Body: { "text": "Hello", "source": "en", "target": "ur" }
 
 ---
 
+## 🚀 Live Demo
+https://EmanFatima8765.pythonanywhere.com
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
