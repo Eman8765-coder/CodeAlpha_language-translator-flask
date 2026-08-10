@@ -1,18 +1,4 @@
-# requirements.txt
-# This file lists all Python libraries your project needs.
-# Run this command to install them all at once:
-#   pip install -r requirements.txt
-#
-# WHY THIS FILE?
-# When you share your project on GitHub, you don't upload
-# the installed libraries (they're huge). Instead you share
-# this file and others can install everything with one command.
-
 flask==3.0.0
-# Flask — the web framework that creates our server
-
 flask-cors==4.0.0
-# Flask-CORS — allows our HTML frontend to talk to Flask backend
-
 requests==2.31.0
-# Requests — Python library to call external APIs (like MyMemory)
+gunicorn==21.2.0
